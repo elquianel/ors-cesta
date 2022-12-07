@@ -1,6 +1,7 @@
 import { StatusBar, SafeAreaView, View } from 'react-native';
 import { useFonts, Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
 import Cesta from './src/screens/Cesta';
+import AppLoading from 'expo-app-loading';
 
 
 export default function App() {
@@ -11,7 +12,8 @@ export default function App() {
 
   // verificando se a fonte foi carregada
   if(!fontLoad){
-    return <View />
+    //mantém a splash enquanto o app carrega
+    return <AppLoading />
   }
 
   return (
