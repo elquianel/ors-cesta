@@ -1,6 +1,7 @@
 import React from 'react';
 //a utilização de chaves é quando um componente é exportado
 import { Text, Image, StyleSheet, Dimensions, View } from 'react-native';
+import Texto from '../components/Text';
 import topo from './../../assets/topo.png';
 import logoFarm from './../../assets/logo.png';
 
@@ -10,7 +11,7 @@ export default function Cesta(){
     //as tags juntas são fragmentos
     return <>
             <Image source={topo} style={estilos.topo} />
-            <Text style={estilos.title}>Detalhe da Cesta</Text>
+            <Texto style={estilos.title}>Detalhe da Cesta</Texto>
 
             <View style={estilos.cesta}>
             <Text style={estilos.name}>Cesta de Verduras</Text>
@@ -34,6 +35,7 @@ const estilos = StyleSheet.create({
         height: 578 / 768 * width
 
     },
+
     title: {
         position: 'absolute',
         textAlign: 'center',
@@ -54,7 +56,7 @@ const estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         color: "#464646",
-        fontFamily: "MontserratBold"
+        fontWeight: 'bold',
     },
 
     fazenda: {
@@ -71,7 +73,6 @@ const estilos = StyleSheet.create({
         fontSize: 16,
         lineHeight: 26,
         marginLeft: 12,
-        fontFamily: "MontserratRegular"
     },
 
     description:{
